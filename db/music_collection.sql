@@ -11,4 +11,6 @@ CREATE TABLE albums(
   title VARCHAR(255),
   genre VARCHAR(255),
   artist_id INT4 REFERENCES artists(id)
+  -- artist_id INT4 REFERENCES artists(id) ON DELETE CASCADE
+  -- the line above would allow an artist to be deleted, but would therefore delete all associated albums
 );
